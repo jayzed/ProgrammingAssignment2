@@ -16,7 +16,7 @@ makeCacheMatrix <- function(x = matrix()) {
   set <- function(y) {
     ## Sets y to replace x
     x <<- y
-    ## Sets inverse to null again
+    ## Resets the inverse to null
     inverse <<- NULL
   }
   
@@ -29,6 +29,7 @@ makeCacheMatrix <- function(x = matrix()) {
   ## 4. Gets the inverse
   getInverse <- function() inverse
   
+  ## Return list of functions
   list(set = set, get = get,
        setInverse = setInverse,
        getInverse = getInverse)
